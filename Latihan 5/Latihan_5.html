@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan 5</title>
+    </head>
+    <body>
+        <h1>Bilangan Fibonacci</h1>
+        <h3>Masukkan angka sembarang</h3>
+    <form>
+        <input type="text" id="txtloop"/> 
+        <input type="button" id="Enter" value="Hitung" onclick="CalcFib(txtloop.value)"/> 
+        <p>Bilangan fibonacci dari angka tersebut adalah</p> 
+        <span id="hasil"></span>
+    </form>
+        <script>
+        var CalcFib = function (n) 
+    {
+        if (n==1) {
+		var loop = [0,1];
+		return loop;
+    }
+		else
+        {
+		var a = CalcFib(n-1);
+		a.push(a[a.length - 1] + a[a.length - 2]);
+		document.getElementById("hasil").innerHTML = a;
+	return a;
+    }
+}
+        </script>
+    </body>
+</html>

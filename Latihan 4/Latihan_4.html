@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan 4</title>
+    </head>
+    <body>
+        <h1>Bilangan Prima</h1>
+        <h3>Masukkan angka sembarang</h3>
+    <form>
+        <input type="text" id="input"/>
+        <button type="button" onclick="CalcPrime()">Hitung</button>
+        <p>Bilangan prima dari angka tersebut adalah</p> 
+        <span id="hasil"></span>
+    </form>
+    <script>
+        function CalcPrime() 
+    {
+    var a=document.getElementById("input").value; document.getElementById("hasil").innerHTML="";
+    if(a>=0){
+    for(i=2;i<=a;i++){
+    var jawab=false;
+    	for(j=2;j<i;j++){
+        	if(i%j==0)
+            jawab=true
+    }
+    if(!jawab){
+   	if(i>2){
+    document.getElementById("hasil").innerHTML+=", ";
+	}
+	document.getElementById("hasil").innerHTML+=i;
+				}
+					}  
+			}
+						}
+    </script>
+    </body>
+</html>
